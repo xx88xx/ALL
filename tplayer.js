@@ -64,7 +64,7 @@
             this.play(playing-1);
         },
         get duration() {
-            return player.getAudio().duration;  
+            return player.getAudio().duration;
         },
         set currentTime(value) {
             player.getAudio().currentTime = value;
@@ -187,7 +187,7 @@
     function print(text) {
         console.log("%ctPlayer%c" + text,"border-top-left-radius:5px;border-bottom-left-radius:5px;padding:0 5px;font-size:24px;font-family:'Microsoft YaHei Light','Microsoft YaHei';background-color:darkred;color:white;","border-top-right-radius:5px;border-bottom-right-radius:5px;padding:5px;padding-top:10px;padding-bottom:2px;font-size:14px;font-family:'Microsoft YaHei Light','Microsoft YaHei';background-color:pink;color:darkred;margin:5px;margin-left:0;");
     }
-    window.createPlayer = function(container,playlist,autoplay = true) {
+    window.createPlayer = function(container,playlist,autoplay = false) {
         let self = createPlayer;
         window.createPlayer = undefined;
         if (typeof(playlist) == "number") {
